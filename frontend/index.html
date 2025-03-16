@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pterodactyl Panel Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Panel Pterodactyl</h1>
+    
+    <!-- Tombol Pilihan -->
+    <div class="button-container">
+        <button onclick="showForm('createUser')">Membuat User's Biasa</button>
+        <button onclick="showForm('createAdmin')">Membuat Admin Panel</button>
+        <button onclick="showForm('deleteServer')">Menghapus Server Panel</button>
+        <button onclick="showForm('deleteAdmin')">Menghapus ADMIN Panel</button>
+        <button onclick="showForm('listServer')">List SERVER Panel</button>
+        <button onclick="showForm('listAdmin')">List ADMIN Panel</button>
+    </div>
+
+    <!-- Formulir -->
+    <div id="formContainer">
+        <div id="createUser" class="form hidden">
+            <h2>Membuat User's Biasa</h2>
+            <input type="text" id="input_nama" placeholder="Nama User">
+            <select id="input_ram">
+                <option value="1">1GB</option>
+                <option value="2">2GB</option>
+                <option value="4">4GB</option>
+                <option value="8">8GB</option>
+                <option value="10">10GB</option>
+            </select>
+            <button>Create</button>
+        </div>
+
+        <div id="createAdmin" class="form hidden">
+            <h2>Membuat Admin Panel</h2>
+            <input type="text" id="input_admin_nama" placeholder="Nama Admin">
+            <button>Create</button>
+        </div>
+
+        <div id="deleteServer" class="form hidden">
+            <h2>Menghapus Server Panel</h2>
+            <select id="server_list">
+                <option value="server1">Server 1</option>
+                <option value="server2">Server 2</option>
+            </select>
+            <label><input type="checkbox"> Konfirmasi Hapus</label>
+            <button>Delete</button>
+        </div>
+
+        <div id="deleteAdmin" class="form hidden">
+            <h2>Menghapus Admin Panel</h2>
+            <select id="admin_list">
+                <option value="admin1">Admin 1</option>
+                <option value="admin2">Admin 2</option>
+            </select>
+            <label><input type="checkbox"> Konfirmasi Hapus</label>
+            <button>Delete</button>
+        </div>
+
+        <div id="listServer" class="form hidden">
+            <h2>List SERVER Panel</h2>
+            <ul>
+                <li>User 1 - Server 1</li>
+                <li>User 2 - Server 2</li>
+            </ul>
+        </div>
+
+        <div id="listAdmin" class="form hidden">
+            <h2>List ADMIN Panel</h2>
+            <ul>
+                <li>Admin 1</li>
+                <li>Admin 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
